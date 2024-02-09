@@ -1,0 +1,8 @@
+.vscode
+__pycache__
+.DS_Store
+*.npz
+# make an exception for x0_arr.npz
+!*x0_arr_10.npz
+*.pdf
+*.html
