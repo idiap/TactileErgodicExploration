@@ -26,70 +26,7 @@ import open3d as o3d
 from scipy.spatial import KDTree
 
 
-import cv2
-
 input_img_dir = "images/"
-
-
-# Utility functions
-# ===================================================================
-def sdf2pcloud(
-    sdf_filepath="sdf01.npy", grid_size=40, output_filepath="point_clouds/pcloud01.ply"
-):
-    data = np.load(sdf_filepath, allow_pickle="True").item()
-    # sampling grid for building the point cloud from the SDF
-    T1, T2 = np.meshgrid(np.linspace(0, 1, grid_size), np.linspace(0, 1, grid_size))
-    t12 = np.vstack((T2.flatten(), T1.flatten())).T
-    sdf = data["y"].T
-    # signed distance will be the z coordinate of the pcloud
-    points = np.concatenate([t12, sdf], axis=1)
-    # remove the interior of the objects (points with negative sdf)
-    mask = sdf > 0
-    points = points[mask[:, 0]]
-    points_tmp = points.copy()
-    for i in range(10):
-        points_tmp[:, 2] = points_tmp[:, 2] + i * 0.002 * np.ones(points_tmp.shape[0])
-        points = np.vstack((points, points_tmp))
-
-    # add color just for the visualization (not required)
-    pcd = o3d.geometry.PointCloud()
-    colors = np.zeros_like(points)
-    colors[:, 2] = points[:, 2][points[:, 2] > 0]
-    pcd.colors = o3d.utility.Vector3dVector(
-        colors
-    )  # r: obstacle, g: target, b: boundary
-
-    pcd.points = o3d.utility.Vector3dVector(points)
-    print(f"Saving the point cloud to {output_filepath}")
-    o3d.io.write_point_cloud(output_filepath, pcd)
-
-
-def process_point_cloud2(filename, param):
-    class pcloud:
-        pass  # c-style struct
-
-    pcd_tmp = o3d.io.read_point_cloud(filename)
-    pcd = pcd_tmp.voxel_down_sample(voxel_size=param.voxel_size)  # downsample
-    pcloud.pcd_tree = o3d.geometry.KDTreeFlann(pcd)
-    pcloud.vertices = np.asarray(pcd.points)
-    colors = np.asarray(pcd.colors)
-
-    original_num_vertices = np.asarray(pcd_tmp.points).shape[0]
-
-    print(
-        f"Original Point cloud with {original_num_vertices}"
-        + f" points is downsampled with voxel size {param.voxel_size}"
-        + f"\n resulted in {len(pcd.points)} points"
-    )
-    # set the exploration target using the 'red' channel of the point cloud
-    u0 = colors[:, 0]
-    pcloud.u0 = np.where(u0 < 1, 0, 255)
-    # compute the K-D tree for the nearest neighbor queries later
-    pcloud.pcd_tree = o3d.geometry.KDTreeFlann(pcd)
-
-    pcloud.dt, pcloud.h = calculate_dt(pcloud.vertices, param.alpha)
-    print(f"dt: {pcloud.dt:.3e}, h: {pcloud.h:.3e}, s: {param.voxel_size:.3e}")
-    return pcloud
 
 
 def process_point_cloud(filename, param):

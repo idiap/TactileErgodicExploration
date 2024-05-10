@@ -2,18 +2,22 @@
 
 Sandbox code for "Tutorial on Ergodic Control @ ICRA 2024"
 
-This package implements an ergodic controller on point clouds. It extends the heat-equation-driven area coverage (HEDAC) algorithm by uses Laplacian eigenbasis for computing the potential field resulting from the diffusion on the point cloud
+This package implements an ergodic controller on point clouds. It extends the heat-equation-driven area coverage (HEDAC) algorithm by using Laplace-Beltrami eigenbasis for computing the potential field resulting from the diffusion on the point cloud
 
 
 ## Table of Contents
 
 Notebooks:
 - annotate_target_obstacle.ipynb  
-    - Creates point clouds with exploration targets. Loads a user-defined point cloud, projects a user-defined target, visualizes it and saves the point cloud for further use with the method.
+    - Loads a user-defined point cloud, let's the user draw the target using mouse, visualizes it and saves the point cloud to be used with ergodic_control notebook.
 - ergodic_control_point_cloud.ipynb
-    - A notebook describing the whole method from start to finish with references and equations. All the simulation data used in the paper are generated using the "multi" option for the simulation_type and running the notebook once for each shape.
+    - A notebook describing the whole method from start to finish with references and equations.
 
-- Googla colab version of the ergodic_control_point_cloud.ipynb: https://colab.research.google.com/drive/1WFfS4oKQ089wCDgMpZatVTfI6JyIskCY?usp=sharing
+![Result for the Stanford bunny](https://github.com/idiap/TactileErgodicExploration/tree/tutorial/media/tutorial_bunny.gif)
+
+- Google colab version of the ergodic_control_point_cloud.ipynb, you can play with this without installing anything to your computer: 
+  - https://colab.research.google.com/drive/1WFfS4oKQ089wCDgMpZatVTfI6JyIskCY?usp=sharing
+
 
 Scripts:
 - point_cloud_utils.py
