@@ -2,9 +2,9 @@
 
 Sandbox code for "Tutorial on Ergodic Control @ ICRA 2024"
 
-This package implements an ergodic controller on point clouds. It extends the heat-equation-driven area coverage (HEDAC) algorithm by using Laplace-Beltrami eigenbasis for computing the potential field resulting from the diffusion on the point cloud
+This package implements an ergodic controller on point clouds.
 
-
+<img src="media/tutorial_bunny.gif" alt="drawing" width="300"/>
 ## Table of Contents
 
 Notebooks:
@@ -14,7 +14,6 @@ Notebooks:
     - A notebook describing the whole method from start to finish with references and equations.
 
 <!-- ![Result for the Stanford bunny](https://github.com/idiap/TactileErgodicExploration/tree/tutorial/media/tutorial_bunny.gif) -->
-<img src="media/smc_ergodic_control.gif" alt="drawing" width="240"/>
 
 - Google colab version of the ergodic_control_point_cloud.ipynb, you can play with this without installing anything to your computer: 
   - https://colab.research.google.com/drive/1WFfS4oKQ089wCDgMpZatVTfI6JyIskCY?usp=sharing
