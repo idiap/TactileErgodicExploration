@@ -4,7 +4,9 @@ Sandbox code for "Tutorial on Ergodic Control @ ICRA 2024"
 
 This package implements an ergodic controller on point clouds.
 
-<img src="media/tutorial_bunny.gif" alt="drawing" width="300"/>
+<img src="media/tutorial_bunny.gif" alt="drawing" width="500"/>
+<img src="media/tutorial_cup_plate.gif" alt="drawing" width="500"/>
+
 ## Table of Contents
 
 Notebooks:
@@ -12,8 +14,6 @@ Notebooks:
     - Loads a user-defined point cloud, let's the user draw the target using mouse, visualizes it and saves the point cloud to be used with ergodic_control notebook.
 - ergodic_control_point_cloud.ipynb
     - A notebook describing the whole method from start to finish with references and equations.
-
-<!-- ![Result for the Stanford bunny](https://github.com/idiap/TactileErgodicExploration/tree/tutorial/media/tutorial_bunny.gif) -->
 
 - Google colab version of the ergodic_control_point_cloud.ipynb, you can play with this without installing anything to your computer: 
   - https://colab.research.google.com/drive/1WFfS4oKQ089wCDgMpZatVTfI6JyIskCY?usp=sharing
