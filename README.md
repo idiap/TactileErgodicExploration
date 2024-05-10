@@ -9,6 +9,23 @@ This package implements an ergodic controller on point clouds.
 <img src="media/tutorial_bunny.gif" alt="drawing" width="500"/>
 <img src="media/tutorial_cup_plate.gif" alt="drawing" width="500"/>
 
+This repository is the supplementary material of the paper "Tactile Ergodic Control Using Diffusion and Geometric Algebra."
+Link to the paper: http://arxiv.org/abs/2402.04862
+```
+@online{bilalogluTactileErgodicControl2024,
+  title = {Tactile {{Ergodic Control Using Diffusion}} and {{Geometric Algebra}}},
+  author = {Bilaloglu, Cem and Löw, Tobias and Calinon, Sylvain},
+  date = {2024-02-07},
+  eprint = {2402.04862},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  url = {http://arxiv.org/abs/2402.04862}}
+```
+
+Paper webpage including interactive plots and real-world experiment videos:
+
+https://bit.ly/tactile_control
+
 
 ## Table of Contents
 
@@ -35,22 +52,6 @@ Point clouds:
 - A random cup we found in the office and recorded using our setup, 'X' image projected to it using set_point_cloud_target.ipynb 
 - A plate from IKEA, recorded using our setup (it includes the exploration target by itself)
 
-It is supplementary material for the paper "Tactile Ergodic Control Using Diffusion and Geometric Algebra."
-Link to the paper: http://arxiv.org/abs/2402.04862
-```
-@online{bilalogluTactileErgodicControl2024,
-  title = {Tactile {{Ergodic Control Using Diffusion}} and {{Geometric Algebra}}},
-  author = {Bilaloglu, Cem and Löw, Tobias and Calinon, Sylvain},
-  date = {2024-02-07},
-  eprint = {2402.04862},
-  eprinttype = {arxiv},
-  eprintclass = {cs},
-  url = {http://arxiv.org/abs/2402.04862}}
-```
-
-Paper webpage including interactive plots and real-world experiment videos:
-
-https://bit.ly/tactile_control
 
 ## Dependencies
 
