@@ -2,7 +2,9 @@
 
 Sandbox code for "Tutorial on Ergodic Control @ ICRA 2024"
 
-This package implements an ergodic controller on point clouds. [[Google colab]](https://colab.research.google.com/drive/1WFfS4oKQ089wCDgMpZatVTfI6JyIskCY?usp=sharing)
+This package implements an ergodic controller on point clouds. 
+
+[[Google colab version]](https://colab.research.google.com/drive/1WFfS4oKQ089wCDgMpZatVTfI6JyIskCY?usp=sharing)
 
 <img src="media/tutorial_bunny.gif" alt="drawing" width="500"/>
 <img src="media/tutorial_cup_plate.gif" alt="drawing" width="500"/>
