@@ -1,12 +1,13 @@
-This package implements an ergodic controller on point clouds. 
+This package implements an ergodic controller on point clouds and it is the supplementary material of the paper "Tactile Ergodic Coverage on Curved Surfaces"
+
+Link to the paper: http://arxiv.org/abs/2402.04862
 
 [[Google colab version]](https://colab.research.google.com/drive/1WFfS4oKQ089wCDgMpZatVTfI6JyIskCY?usp=sharing)
 
-<img src="media/tutorial_bunny.gif" alt="drawing" width="500"/>
-<img src="media/tutorial_cup_plate.gif" alt="drawing" width="500"/>
+<img src="data/gifs/bunny.gif" alt="drawing" width="500"/>
+<img src="data/gifs/cup_plate.gif" alt="drawing" width="500"/>
 
-This repository is the supplementary material of the paper "Tactile Ergodic Coverage on Curved Surfaces"
-Link to the paper: http://arxiv.org/abs/2402.04862
+
 
 
 Paper webpage including interactive plots and real-world experiment videos:
@@ -24,7 +25,7 @@ Notebooks:
   - https://colab.research.google.com/drive/1WFfS4oKQ089wCDgMpZatVTfI6JyIskCY?usp=sharing
 
 
-Scripts:
+Utilities:
 - pointcloud_utils.py
     - Point cloud operations such as read/write kNN queries, gradient computation, etc.
 - plotting_utils.py
