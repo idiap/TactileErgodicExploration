@@ -14,9 +14,11 @@ Link to the paper: http://arxiv.org/abs/2402.04862
 
 Paper webpage including interactive plots and real-world experiment videos:
 
-https://geometric-algebra.tobiloew.ch/tactile_ergodic_control/
+https://sites.google.com/view/tactile-ergodic-control/
 
-The real-world experiment data stored as bag files are in the ```bags``` folder.
+For the real-world experiment data stored as bag files we use the Google Drive (each run is ~500 MB):
+
+https://drive.google.com/drive/folders/10DY-D9wBv2Lu6eJjmtGL661o874oOHWy?usp=sharing
 
 It is possible to generate all the simulation data and the plots used in the paper using this repository. 
 
@@ -35,17 +37,6 @@ robust_laplacian: https://github.com/nmwsharp/robust-laplacians-py
 }
 ```
 
-For geometric algebra operations:
-pygafro: https://gitlab.idiap.ch/tloew/gafro
-```
-@article{loewGeometricAlgebraOptimal2023,
-  title = {Geometric {{Algebra}} for {{Optimal Control}} with {{Applications}} in {{Manipulation Tasks}}},
-  author = {L\"ow, Tobias and Calinon, Sylvain},
-  date = {2023},
-  journal = {IEEE Transactions on Robotics},
-  doi = {10.1109/TRO.2023.3277282}
-}
-```
 
 For basic point cloud operations (another library can be easily used instead):
 open3d: https://www.open3d.org
@@ -60,19 +51,14 @@ For linear algebra operations:
 numpy: https://numpy.org
 
 Notebooks:
-- set_point_cloud_target.ipynb  
-    - Creates point clouds with exploration targets. Loads a user-defined point cloud, projects a user-defined target, visualizes it and saves the point cloud for further use with the method.
-- laplacian_hedac_point_cloud.ipynb
+- tactile_ergodic_control.ipynb
     - A notebook describing the whole method from start to finish with references and equations. All the simulation data used in the paper are generated using the "multi" option for the simulation_type and running the notebook once for each shape.
-- process_results.ipynb
-    - A notebook for processing the experiment data and for generating the plots. All the plots used in the paper are generated using this notebook.
-
 
 Scripts:
-- hedac_utils.py
-    - A collection of utility functions related to the method.
+- pointcloud_utils.py
+    - A collection of utility functions for pointcloud operations
 - plotting_utils.py
-    - A collection of plotting utility functions used by the notebooks.
+    - A collection of utility functions for plotting
 - virtual_agents.py
     - Classes for the first and second order virtual agents.
 

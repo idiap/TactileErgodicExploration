@@ -1,5 +1,6 @@
-Bag files of the real-world experiments are in the ```bags``` folder.
+Bag files of the real-world experiments are hosted at
 
+https://drive.google.com/drive/folders/10DY-D9wBv2Lu6eJjmtGL661o874oOHWy
 
 First ensure that you use the time published by the bag file for all the following steps. Otherwise you will get an error from the TF.
 

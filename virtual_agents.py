@@ -2,19 +2,19 @@
     Copyright (c) 2024 Idiap Research Institute, http://www.idiap.ch/
     Written by Cem Bilaloglu <cem.bilaloglu@idiap.ch>
 
-    This file is part of tactileErgodicExploration.
+    This file is part of diffusionVirtualFixtures.
 
-    tactileErgodicExploration is free software: you can redistribute it and/or modify
+    diffusionVirtualFixtures is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License version 3 as
     published by the Free Software Foundation.
 
-    tactileErgodicExploration is distributed in the hope that it will be useful,
+    diffusionVirtualFixtures is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with tactileErgodicExploration. If not, see <http://www.gnu.org/licenses/>.
+    along with diffusionVirtualFixtures. If not, see <http://www.gnu.org/licenses/>.
 """
 
 import numpy as np
@@ -43,7 +43,9 @@ class FirstOrderAgent:
         self.max_velocity = max_velocity
         self.dt = dt
         self.dim_t = dim_t
-        if self.dim_t is not None:
+        if self.dim_t is None:
+            self.x_list = []
+        else:
             self.x_arr = np.zeros((self.dim_t, 3))
             self.t = 0
 
@@ -63,7 +65,9 @@ class FirstOrderAgent:
             self.dx = self.max_velocity * gradient / np.linalg.norm(gradient)
         self.x = self.x + self.dt * self.dx
 
-        if self.dim_t is not None:
+        if self.dim_t is None:
+            self.x_list.append(self.x)
+        else:
             self.x_arr[self.t, :] = self.x
             self.t += 1
 
@@ -95,7 +99,7 @@ class SecondOrderAgent:
         self.dt = dt
         self.dim_t = dim_t
         if self.dim_t is not None:
-            self.x = np.zeros((dim_t, 3))
+            self.x_arr = np.zeros((dim_t, 3))
             self.t = 0
 
         self.max_velocity = max_velocity
