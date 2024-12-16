@@ -1,7 +1,3 @@
-# ergodic-control-sandbox
-
-Sandbox code for "Tutorial on Ergodic Control @ ICRA 2024"
-
 This package implements an ergodic controller on point clouds. 
 
 [[Google colab version]](https://colab.research.google.com/drive/1WFfS4oKQ089wCDgMpZatVTfI6JyIskCY?usp=sharing)
@@ -9,38 +5,27 @@ This package implements an ergodic controller on point clouds.
 <img src="media/tutorial_bunny.gif" alt="drawing" width="500"/>
 <img src="media/tutorial_cup_plate.gif" alt="drawing" width="500"/>
 
-This repository is the supplementary material of the paper "Tactile Ergodic Control Using Diffusion and Geometric Algebra."
+This repository is the supplementary material of the paper "Tactile Ergodic Coverage on Curved Surfaces"
 Link to the paper: http://arxiv.org/abs/2402.04862
-```
-@online{bilalogluTactileErgodicControl2024,
-  title = {Tactile {{Ergodic Control Using Diffusion}} and {{Geometric Algebra}}},
-  author = {Bilaloglu, Cem and Löw, Tobias and Calinon, Sylvain},
-  date = {2024-02-07},
-  eprint = {2402.04862},
-  eprinttype = {arxiv},
-  eprintclass = {cs},
-  url = {http://arxiv.org/abs/2402.04862}}
-```
+
 
 Paper webpage including interactive plots and real-world experiment videos:
 
-https://bit.ly/tactile_control
+https://sites.google.com/view/tactile-ergodic-control/
 
 
 ## Table of Contents
 
 Notebooks:
-- annotate_target_obstacle.ipynb  
-    - Loads a user-defined point cloud, let's the user draw the target using mouse, visualizes it and saves the point cloud to be used with ergodic_control notebook.
-- ergodic_control_point_cloud.ipynb
+- tactile_ergodic_control.ipynb
     - A notebook describing the whole method from start to finish with references and equations.
 
-- Google colab version of the ergodic_control_point_cloud.ipynb, you can play with this without installing anything to your computer: 
+- Google colab version you can play with this without installing anything to your computer: 
   - https://colab.research.google.com/drive/1WFfS4oKQ089wCDgMpZatVTfI6JyIskCY?usp=sharing
 
 
 Scripts:
-- point_cloud_utils.py
+- pointcloud_utils.py
     - Point cloud operations such as read/write kNN queries, gradient computation, etc.
 - plotting_utils.py
     - A collection of plotting utility functions used by the notebooks.
