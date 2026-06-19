@@ -84,3 +84,7 @@ numpy: https://numpy.org
 Please see the LICENSE for more information.
 
 Contact: cem.bilaloglu@epfl.ch
+
+## Acknowledgment
+
+This work was supported by the State Secretariat for Education, Research and Innovation in Switzerland and the European Commission's Horizon Europe Program through the INTELLIMAN project (https://intelliman-project.eu/, HORIZON-CL4-Digital-Emerging Grant 101070136) and the SESTOSENSO project (http://sestosenso.eu/, HORIZON-CL4-Digital-Emerging Grant 101070310).
